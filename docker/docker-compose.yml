@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  enterprise-dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+
+    container_name: enterprise-dashboard
+
+    ports:
+      - "8080:80"
+
+    restart: unless-stopped
