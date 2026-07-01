@@ -1,236 +1,39 @@
-\# 🚀 Enterprise DevSecOps CI/CD Pipeline on AWS
-
-
-
-\## 📖 Overview
-
-
-
-This project demonstrates a complete Enterprise DevSecOps CI/CD pipeline built using industry-standard tools.
-
-
-
-The pipeline automates:
-
-
-
-\- Source Code Management
-
-\- Static Code Analysis
-
-\- Dependency Scanning
-
-\- Docker Image Build
-
-\- Container Security Scanning
-
-\- Continuous Deployment
-
-\- Infrastructure Provisioning
-
-\- Monitoring
-
-\- Logging
-
-
-
-\---
-
-
-
-\## 🏗 Architecture
-
-
-
-Developer
-
-
-
-↓
-
-
-
-GitHub
-
-
-
-↓
-
-
-
-Jenkins Pipeline
-
-
-
-↓
-
-
-
-SonarQube
-
-
-
-↓
-
-
-
-OWASP Dependency Check
-
-
-
-↓
-
-
-
-Docker Build
-
-
-
-↓
-
-
-
-Trivy Scan
-
-
-
-↓
-
-
-
-Docker Hub
-
-
-
-↓
-
-
-
-Terraform
-
-
-
-↓
-
-
-
-AWS EC2
-
-
-
-↓
-
-
-
-Application Load Balancer
-
-
-
-↓
-
-
-
-Auto Scaling Group
-
-
-
-↓
-
-
-
-Prometheus
-
-
-
-↓
-
-
-
-Grafana
-
-
-
-\---
-
-
-
-\## 🛠 Technologies
-
-
-
-\- AWS
-
-\- Docker
-
-\- Jenkins
-
-\- Terraform
-
-\- SonarQube
-
-\- Trivy
-
-\- OWASP Dependency Check
-
-\- Prometheus
-
-\- Grafana
-
-\- Git
-
-\- GitHub
-
-\- Linux
-
-\- Nginx
-
-
-
-\---
-
-
-
-\## 📂 Project Structure
-
-
+# Enterprise DevSecOps Pipeline
+
+A production-style DevSecOps project demonstrating modern CI/CD practices.
+
+## Technologies
+
+- Git
+- GitHub
+- Docker
+- Jenkins
+- Kubernetes
+- Terraform
+- Nginx
+- AWS
+- Prometheus
+- Grafana
+
+## Project Structure
 
 ```
-
-enterprise-devsecops-pipeline/
-
-
-
 app/
-
 docker/
-
 jenkins/
-
-terraform/
-
 kubernetes/
-
+terraform/
 monitoring/
-
 docs/
-
 screenshots/
-
-
-
-README.md
-
 ```
 
+## Progress
 
-
-\---
-
-
-
-\## 🚧 Project Status
-
-
-
-🟢 In Progress
-
+- ✅ Day 1 - Repository Setup
+- ✅ Day 2 - Web Application
+- ⏳ Docker
+- ⏳ Jenkins
+- ⏳ Kubernetes
+- ⏳ Terraform
+- ⏳ Monitoring
