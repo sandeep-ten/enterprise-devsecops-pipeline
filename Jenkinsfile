@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage('Show Files') {
+        stage('Show Workspace') {
             steps {
                 sh 'pwd'
                 sh 'ls -la'
@@ -18,18 +18,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t enterprise-dashboard:latest -f docker/Dockerfile .'
+                sh 'docker build -t enterprise-nginx .'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Docker Image Built Successfully!'
-        }
-
-        failure {
-            echo 'Pipeline Failed!'
         }
     }
 }
