@@ -5,36 +5,31 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Repository already checked out by Jenkins.'
+                checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Show Files') {
             steps {
-                echo 'Building Application...'
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
 
-        stage('Test') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Running Tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying Application...'
+                sh 'docker build -t enterprise-dashboard:latest -f docker/Dockerfile .'
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'Docker Image Built Successfully!'
         }
 
         failure {
-            echo 'Pipeline failed!'
+            echo 'Pipeline Failed!'
         }
     }
 }
