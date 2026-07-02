@@ -16,10 +16,17 @@ pipeline {
             }
         }
 
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t enterprise-nginx .'
+            }
+        }
+
         stage('Hello DevSecOps') {
             steps {
                 sh 'echo "Hello DevSecOps!"'
             }
         }
+
     }
 }
