@@ -9,24 +9,29 @@ pipeline {
             }
         }
 
-        stage('Show Workspace') {
-            steps {
-                sh 'pwd'
-                sh 'ls -la'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t enterprise-nginx .'
+                sh 'docker build -t enterprise-nginx:latest .'
             }
         }
 
-        stage('Hello DevSecOps') {
+        stage('Load Image into Minikube') {
             steps {
-                sh 'echo "Hello DevSecOps!"'
+                sh 'minikube image load enterprise-nginx:latest'
             }
         }
 
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f kubernetes/deployment.yaml'
+                sh 'kubectl apply -f kubernetes/service.yaml'
+            }
+        }
+
+        stage('Rollout Status') {
+            steps {
+                sh 'kubectl rollout status deployment/enterprise-deployment'
+            }
+        }
     }
 }

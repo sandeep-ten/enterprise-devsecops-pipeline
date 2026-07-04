@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: enterprise-pod
+
+spec:
+  containers:
+    - name: enterprise-container
+      image: enterprise-nginx:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 80
