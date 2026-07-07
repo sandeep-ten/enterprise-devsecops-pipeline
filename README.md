@@ -32,15 +32,11 @@ screenshots/
 
 ## Progress
 
-- ✅ Day 1 - Repository Setup
-- ✅ Day 2 - Enterprise Dashboard
-- ✅ Project 1 - Docker
-- ✅ Project 2 - Jenkins CI/CD Pipeline
-- ✅ Project 3 - Kubernetes Deployment
-- ✅ Project 4 - ArgoCD GitOps
-- ✅ Project 5 - Helm Package Manager
-- ⏳ Project 6 - Terraform Infrastructure
-- ⏳ Project 7 - Monitoring (Prometheus + Grafana)
-- ⏳ Project 8 - Security Scanning
-- ⏳ Project 9 - GitHub Actions CI/CD
-- ⏳ Project 10 - Complete Enterprise DevSecOps Pipeline
+## Progress
+
+- ✅ Project 1 - Git & Repository
+- ✅ Project 2 - Docker
+- ✅ Project 3 - Jenkins
+- ✅ Project 4 - Kubernetes
+- ✅ Project 5 - Terraform
+- ✅ Project 6 - Prometheus + Grafana Monitoring
